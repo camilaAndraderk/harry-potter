@@ -1,0 +1,413 @@
+:root{
+    --cor-pele: #E1BFBB;
+    --cor-cabelo: #1A0D0C;
+    --cor-pele-contorno-1: #B7665D;
+    --cor-pele-contorno-2: #D19E98;
+    --cor-roupa-1: #090909;
+    --cor-roupa-2: #2b2b2b;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fundo{
+    width: 100%;
+    height: 100vh;
+    background: url(https://static.vecteezy.com/system/resources/previews/002/617/082/non_2x/night-landscape-with-a-large-moon-on-the-horizon-starry-sky-and-pine-forest-free-vector.jpg);
+    /* creditos: https://www.vecteezy.com/members/ddeviceee */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quadro-1{
+    animation: voando 2.5s ease-in-out infinite backwards;
+    background-color: transparent;
+    height: 17vw;
+    left: 55%;
+    max-height: 700px;
+    max-width: 800px;
+    min-height: 200px;
+    min-width: 300px;
+    position: relative;
+    top: 65%;
+    transform: rotate(-2deg) translate(-50%, -48%);
+    width: 20vw;
+}
+
+.quadro-vassoura{
+    height: 3%;
+    left: 11%;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    transform: rotate(-16deg);
+    z-index: -1;
+}
+
+.cabo{
+    background-color: #5d3e26;
+    height: 100%;
+    width: 100%;
+}
+
+.cabo::before,
+.cabo::after{
+    background-color: #e4b153;
+    border-radius: 21%;
+    content: "";
+    height: 145%;
+    left: 24%;
+    position: absolute;
+    top: -19%;
+    width: 2.2%;
+    z-index: 2;
+}
+
+.cabo::after{
+    left: 27%;
+}
+
+
+.base{
+    background-color: #371d16;
+    border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+    content: "";
+    height: 1100%;
+    left: -14%;
+    position: absolute;
+    top: -360%;
+    transform: rotate(28deg);
+    width: 36%;
+}
+
+.quadro-cabeca{
+    background-color: var(--cor-pele);
+    border-radius: 57px 57px 123px 123px / 103px 103px 77px 77px;
+    height: 29%;
+    left: 55%;
+    position: absolute;
+    width: 30%;
+}
+
+.quadro-cabelo{
+    height: 42%;
+    position: relative;
+    width: 100%;
+    z-index: 11;
+}
+
+.cabelo{
+    background-color: var(--cor-cabelo);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cabelo-1{
+    height: 135%;
+    left: -3%;
+    top: -7%;
+    width: 75%;
+}
+
+.cabelo-1::before,
+.cabelo-1::after{
+    background-color: var(--cor-pele);
+    border-radius: 20% 50% 50% 50% / 20% 50% 50% 50%;
+    content: "";
+    height: 41%;
+    left: 82%;
+    position: absolute;
+    top: 94%;
+    transform: rotate(50deg);
+    width: 20%;
+    z-index: 12;
+}
+
+.cabelo-1::after{
+    border-radius: 10% 92% 50% 50% / 28% 50% 50% 50%;
+    height: 48%;
+    left: 41%;
+    top: 72%;
+    transform: rotate(47deg);
+    width: 24%;
+}
+
+.cabelo-2{
+    height: 164%;
+    right: -4%;
+    top: -13%;
+    width: 84%;
+}
+
+.cabelo-3,
+.cabelo-4,
+.cabelo-5,
+.cabelo-6{
+    background-color: transparent;
+}
+
+.cabelo-3{
+    border-top: 14px solid var(--cor-cabelo);
+    height: 134%;
+    left: 1%;
+    top: 27%;
+    transform: rotate(-46deg);
+    width: 39%;
+}
+
+.cabelo-4{
+    border-right: 14px solid var(--cor-cabelo);
+    height: 115%;
+    right: -8%;
+    top: 40%;
+    transform: rotate(-30deg);
+    width: 34%;
+}
+
+.cabelo-5{
+    border-top: 10px solid var(--cor-cabelo);
+    height: 82%;
+    left: 17%;
+    top: -39%;
+    transform: rotate(35deg);
+    width: 27%;
+}
+
+.cabelo-6{
+    border-top: 10px solid var(--cor-cabelo);
+    height: 84%;
+    left: 24%;
+    top: 58%;
+    transform: rotate(-67deg);
+    width: 28%;
+}
+
+.cicatriz{
+    -webkit-clip-path: polygon(47% 1%, 58% 33%, 38% 31%, 48% 62%, 32% 27%, 53% 29%);
+    background-color: var(--cor-pele-contorno-1);
+    clip-path: polygon(47% 1%, 58% 33%, 38% 31%, 48% 62%, 32% 27%, 53% 29%);
+    height: 33%;
+    left: 23%;
+    position: absolute;
+    top: 36%;
+    width: 28%;
+    z-index: 13;
+}
+
+.quadro-orelha{
+    display: flex;
+    height: 18%;
+    justify-content: space-between;
+    left: 50%;
+    position: absolute;
+    top: 54%;
+    transform: translateX(-50%);
+    width: 110%;
+    z-index: -1;
+}
+
+.orelha{
+    background-color: var(--cor-pele);
+    border-radius: 50%;
+    height: 100%;
+    width: 20%;
+}
+
+.orelha-e::after,
+.orelha-d::after{
+    border-radius: 50%;
+    content: "";
+    height: 46%;
+    position: absolute;
+    top: 29%;
+    transform: rotate(-10deg);
+    width: 9%;
+}
+
+.orelha-e::after{
+    border-left: 2px solid var(--cor-pele-contorno-2);
+    left: 2%;
+}
+
+.orelha-d::after{
+    border-right: 2px solid var(--cor-pele-contorno-2);
+    right: 2%;
+}
+
+.quadro-oculos{
+    column-gap: 12%;
+    display: flex;
+    height: 23%;
+    justify-content: center;
+    position: absolute;
+    top: 54%;
+    width: 100%;
+    z-index: 14;
+}
+
+.quadro-oculos::before{
+    content: "";
+    position: absolute;
+    width: 12%;
+    height: 10%;
+    background-color: black;
+    top: 50%;
+}
+
+.lente{
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 22%;
+}
+
+.lente::before{
+    background-color: var(--cor-cabelo);
+    border-radius: 50%;
+    content: "";
+    height: 46%;
+    position: absolute;
+    width: 10%;
+}
+
+.quadro-boca{
+    align-items: center;
+    bottom: 12%;
+    display: flex;
+    height: 14%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.boca{
+    border-radius: 50%;
+    border: 2px solid var(--cor-pele-contorno-1);
+    height: 100%;
+    position: relative;
+    width: 10%;
+}
+
+.boca::after{
+    background-color: var(--cor-pele);
+    content: "";
+    height: 75%;
+    left: -22%;
+    position: absolute;
+    top: -25%;
+    width: 149%;
+}
+
+.quadro-corpo{
+    height: 43%;
+    left: 49%;
+    position: absolute;
+    top: 14%;
+    width: 33%;
+    z-index: -1;
+}
+
+.capa{
+    -webkit-clip-path: polygon(80% 16%, 94% 30%, 2% 67%, 0% 16%);
+    background: var(--cor-roupa-1);
+    clip-path: polygon(80% 16%, 94% 30%, 2% 67%, 0% 16%);
+    height: 100%;
+    transform: rotate(-12deg);
+    width: 100%;
+}
+
+.capa-detalhe{
+    background-color: var(--cor-roupa-1);
+    border-radius: 10% 30% 100% 14px / 10% 15% 76% 10%;
+    height: 50%;
+    left: 2%;
+    position: absolute;
+    top: 23%;
+    transform: rotate(-11deg);
+    width: 75%;
+}
+
+.braco{
+    background-color: var(--cor-roupa-1);
+    height: 17%;
+    position: absolute;
+    right: 7%;
+    top: 40%;
+    transform: rotate(24deg);
+    width: 26%;
+    z-index: -1;
+}
+
+.braco::after{
+    background-color: var(--cor-roupa-2);
+    content: "";
+    height: 86%;
+    position: absolute;
+    right: -14%;
+    top: 8%;
+    width: 20%;
+}
+
+.braco::before{
+    background-color: var(--cor-pele);
+    border-radius: 50%;
+    content: "";
+    height: 86%;
+    position: absolute;
+    right: -39%;
+    top: 8%;
+    width: 38%;
+}
+
+.calca{
+    background-color: var(--cor-roupa-2);
+    border-radius: 25%;
+    height: 19%;
+    left: 22%;
+    position: absolute;
+    top: 69%;
+    transform: rotate(-30deg);
+    width: 28%;
+    z-index: -1;
+}
+
+.calca::after{
+    background-color: black;
+    border-radius: 33%;
+    content: "";
+    height: 145%;
+    left: -26%;
+    position: absolute;
+    top: -23%;
+    width: 45%;
+}
+
+@keyframes voando{
+    0%{
+        transform: rotate(-2deg) translate(-50%, -48%);
+    }
+    66%{
+        transform: rotate(0deg) translate(-50%, -52%);
+    }
+}
+
+@media (max-width: 1425px){
+
+    .base{
+        transform: rotate(25deg);
+    }
+}
+
+
+@media (max-width: 640px){
+
+    .base{
+        transform: rotate(23deg);
+    }
+}
